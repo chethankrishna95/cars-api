@@ -1,4 +1,4 @@
-name: Java Workflow Demo
+name: Java Workflow Car Build process
 
 on: [push]
 
@@ -7,11 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: List the files in current directory
-        run: ls ${{github.workspace}}
+      
       - name: Verify the Java Version
         run: java --version
-      - name: test gradel
+        
+      - name: test gradel there or not
         run: gradle
+        
       - name: Build java code
         run: gradle build

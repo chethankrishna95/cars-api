@@ -30,7 +30,11 @@ jobs:
     needs: BuildJava
     steps:
       - name: deploy application
-        run: java -jar ./build/libs/cars-api.jar
+        
+        run: |
+          ls -ltr ./build/libs/cars-api.jar
+          chmod +x ./build/libs/cars-api.jar
+          java -jar ./build/libs/cars-api.jar
       - name: Curl Testing
         run: | 
           hostname -i

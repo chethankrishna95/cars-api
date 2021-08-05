@@ -24,12 +24,15 @@ jobs:
         with:
           path: ./build/libs/
           retention-day: 5
-  
-  Test_application:
+
+  Deploy_and_Test_application:
     runs-on: ubuntu-latest
     needs: BuildJava
     steps:
+      - name: deploy application
+        run: java -jar ./build/libs/cars-api.jar
       - name: Curl Testing
         run: | 
           hostname -i
           curl http://localhost:5000
+          

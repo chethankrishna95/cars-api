@@ -45,4 +45,4 @@ jobs:
       - name: Curl Testing
         run: | 
           hostname -i
-          http://localhost:5000/cars/1 | grep -i "Ford"
+          curl http://localhost:5000/cars/1 | grep -i "Ford"

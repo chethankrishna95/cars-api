@@ -14,4 +14,4 @@ jobs:
       - name: test gradel
         run: gradle
       - name: Build java code
-        run: gradlew build
+        run: gradle build

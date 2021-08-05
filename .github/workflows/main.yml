@@ -1,10 +1,11 @@
-name: Java testing flow
+...
+name: Java testing Commands 
 
 on: [push]
 
 jobs:
-	build:
-		runs-on:ubuntu-latest
-		steps:
-			- name: Verify Weather Node is Installed or Not
-			  run: node --version
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Check Java Version
+        run: java -v

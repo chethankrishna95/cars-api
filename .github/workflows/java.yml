@@ -30,5 +30,6 @@ jobs:
     needs: BuildJava
     steps:
       - name: Curl Testing
-        run: hostname -i
-        run: curl http://localhost:5000
+        run: | 
+          hostname -i
+          curl http://localhost:5000
